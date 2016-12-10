@@ -1,0 +1,32 @@
+{
+	"name": "wundermanpraha/cms-text",
+	"type": "library",
+	"description": "",
+	"license": "GNU GPL v3",
+	"support": {
+		"issues": "https://github.com/wundermanpraha/cms-text/issues"
+	},
+	"authors": [
+		{
+			"name": "Petr Besir Horáček",
+			"email": "sirbesir@gmail.com"
+		},
+		{
+			"name": "Pavel Janda",
+			"homepage": "http://paveljanda.com"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"Wunderman\\CMS\\Text\\": "src/"
+		}
+	},
+	"require": {
+		"nette/di" : "^2.3",
+		"nette/application" : "^2.3"
+	},
+	"minimum-stability": "dev",
+	"require-dev": {
+		"codeception/codeception": "^2.1"
+	}
+}

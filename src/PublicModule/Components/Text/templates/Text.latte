@@ -1,0 +1,14 @@
+{*
+ * @var $article
+ *}
+<div id="textComponent-{$article->id}" class="container text-component default">
+	<a n:if="!is_null($article->title) && $article->title !== ''" name="{php echo \Nette\Utils\Strings::webalize($article->title)}" class="anchor"></a>
+	<div class="row">
+		<div class="col-lg-5">
+			<h1 n:if="!is_null($article->title) && $article->title !== ''">{$article->title}</h1>
+		</div>
+		<div class="col-lg-7 text-article-content">
+			{$article->content|noescape}
+		</div>
+	</div>
+</div>

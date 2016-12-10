@@ -1,0 +1,20 @@
+parameters:
+	PrivateModule:
+		AddButtons:
+			## This name must be same as name of injected service in Wunderman\CMS\Text for composedPagePresenter (@privateModuleService in this config)
+			text:
+				text: 'Add text'
+	renderableComponents:
+		text:
+
+services:
+	textServiceService:
+	 	class: Wunderman\CMS\Text\PrivateModule\Service\TextService
+
+	publicTextFactory:
+		class: Wunderman\CMS\Text\PublicModule\Components\Text\Text
+		implement: Wunderman\CMS\Text\PublicModule\Components\Text\ITextFactory
+
+	privateTextFactory:
+		class: Wunderman\CMS\Text\PrivateModule\Components\Text\Text
+		implement: Wunderman\CMS\Text\PrivateModule\Components\Text\ITextFactory

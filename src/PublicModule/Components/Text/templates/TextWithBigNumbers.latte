@@ -1,0 +1,15 @@
+{*
+ * @var $article
+ *}
+{block content}
+<div id="textComponent-{$article->id}" class="container text-component with-big-number">
+	<a n:if="!is_null($article->title) && $article->title !== ''" name="{php echo \Nette\Utils\Strings::webalize($article->title)}" class="anchor"></a>
+	<div class="row">
+		<div class="col-lg-5 big-number-box">
+			<span n:if="!is_null($article->title) && $article->title !== ''" class="big-number">{$article->title}</span>
+		</div>
+		<div class="col-lg-7 text-article-content">
+			{$article->content|noescape}
+		</div>
+	</div>
+</div>
